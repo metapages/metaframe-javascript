@@ -13,6 +13,7 @@ import { Box, Flex, Spacer, VStack } from "@chakra-ui/react";
 import {
   useHashParamJson,
   useHashParamBase64,
+  useHashParamBoolean,
 } from "@metapages/metaframe-hook";
 import { Editor } from "./components/Editor";
 import { Option, OptionsMenuButton } from "./components/OptionsMenu";
@@ -41,6 +42,8 @@ export const App: FunctionalComponent = () => {
   const [options] = useHashParamJson<OptionBlob>("options", {
     theme: "light",
   });
+  // presentation mode means hide all the editing stuff
+  const [isPresentationMode] = useHashParamBoolean("presentation");
   const codeInStore = useStore((state) => state.code);
   const setCodeInStore = useStore((state) => state.setCode);
   const mode = useStore((state) => state.mode);
@@ -79,6 +82,10 @@ export const App: FunctionalComponent = () => {
       runCode(valueHashParam);
     }
   }, [valueHashParam, setCodeInStore, runCode]);
+
+  if (isPresentationMode) {
+    return <div id="render" />;
+  }
 
   const menu = (
     <VStack spacing={2} alignItems="flex-start">

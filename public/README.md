@@ -7,7 +7,7 @@
 This metaframe will execute javascript from code embedded in the URL hash params.
 
   - There is a `div` with the id `render` for adding your own elements.
-
+  - If hash param `presentation=true` then the edit and buttons and feedback will be hidden.
 
 ## Examples
 
