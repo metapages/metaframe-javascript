@@ -73,3 +73,7 @@ return () => {
 ## Source
 
 [https://github.com/metapages/metaframe-javascript](https://github.com/metapages/metaframe-javascript)
+
+## Forking
+
+[https://github.com/metapages/metaframe-template-preact/blob/main/README-developer.md](https://github.com/metapages/metaframe-template-preact/blob/main/README-developer.md)
