@@ -16,7 +16,7 @@
    useHashParamBoolean,
  } from "@metapages/metaframe-hook";
  import { Editor } from "/@/components/Editor";
- import { Option, OptionsMenuButton } from "/@/components/OptionsMenu";
+ import { Option, ButtonOptionsMenu } from "/@/components/ButtonOptionsMenu";
  import { CodeResults } from "/@/components/CodeResults";
  import { Mode, useStore } from "/@/store";
  import { useExecuteCodeWithMetaframe } from "/@/hooks/useExecuteCodeWithMetaframe";
@@ -93,7 +93,7 @@
          <ButtonRun />
          <Spacer />
          <ButtonHelp />
-         <OptionsMenuButton options={appOptions} />
+         <ButtonOptionsMenu options={appOptions} />
        </Flex>
        <CodeResults />
      </VStack>
