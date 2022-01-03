@@ -1,5 +1,6 @@
 import { FunctionalComponent } from "preact";
 import MonacoEditor from "@monaco-editor/react";
+import { Box } from "@chakra-ui/react";
 
 export type EditorProps = {
   mode: string;
@@ -15,17 +16,18 @@ export const Editor: FunctionalComponent<EditorProps> = ({
   theme,
 }) => {
   return (
-    <MonacoEditor
-      defaultLanguage={mode}
-      theme={theme}
-      options={{
-        minimap: { enabled: false },
-      }}
-      onChange={setValue}
-      value={value}
-      width="100%"
-      // height="99vh"
-      height="80vh"
-    />
+    <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
+      <MonacoEditor
+        defaultLanguage={mode}
+        theme={theme}
+        options={{
+          minimap: { enabled: false },
+        }}
+        onChange={setValue}
+        value={value}
+        width="100%"
+        height="70vh"
+      />
+    </Box>
   );
 };
