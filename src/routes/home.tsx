@@ -22,6 +22,7 @@ import { Mode, useStore } from "/@/store";
 import { useExecuteCodeWithMetaframe } from "/@/hooks/useExecuteCodeWithMetaframe";
 import { ButtonRun } from "/@/components/ButtonRun";
 import { ButtonHelp } from "/@/components/ButtonHelp";
+import { ButtonPresentationMode } from '../components/ButtonPresentationMode';
 
 const appOptions: Option[] = [
   {
@@ -100,6 +101,7 @@ export const Route: FunctionalComponent = () => {
       <Flex width="100%">
         <ButtonRun />
         <Spacer />
+        <ButtonPresentationMode />
         <ButtonHelp />
         <ButtonOptionsMenu options={appOptions} />
       </Flex>
