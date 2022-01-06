@@ -47,7 +47,6 @@ const HelpPanel: FunctionalComponent<{
   isOpen: boolean;
   setOpen: (open: boolean) => void;
 }> = ({ isOpen, setOpen, url }) => {
-  console.log("isOpen", isOpen);
   const onClose = useCallback(() => {
     setOpen(!isOpen);
   }, [setOpen, isOpen]);
