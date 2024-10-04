@@ -1,3 +1,7 @@
+# DEPRECATED!!!
+
+Replaced by https://github.com/metapages/metaframe-js
+
 # [Metaframe](https://metapages.org/) coordinated git repository + npm module + github-pages site
 
 User docs: [./public/README.md](./public/README.md)
